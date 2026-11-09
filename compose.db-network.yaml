@@ -1,0 +1,14 @@
+# Attaches the API to an existing Docker network that the PostgreSQL
+# container runs on, so DMD_DB_API_HOST can use its service name.
+#
+#   docker compose -f compose.yaml -f compose.db-network.yaml up -d
+services:
+  api:
+    networks:
+      - default
+      - database
+
+networks:
+  database:
+    external: true
+    name: ${DB_NETWORK:-db_monitor-net}

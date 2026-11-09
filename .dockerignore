@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+dist
+coverage
+docs
+*.md
+.env
+.env.*
+compose.yaml
+keygen.sh
+npm-debug.log*
